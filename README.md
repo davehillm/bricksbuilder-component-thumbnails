@@ -1,5 +1,7 @@
 # BricksBuilder Component Thumbnails
 
+> **One-off community release. Not actively maintained.** No ongoing support, security fixes, or compatibility updates are promised. Tested with Bricks 2.4.4, WordPress 7.1.4, and PHP 8.3. Test on a staging site before use. Shared as a frozen reference; forks are welcome under the license below.
+
 **Component Thumbnail Studio** is a WordPress plugin for composing custom Bricks component previews directly inside the Bricks editor.
 
 Capture the component you are editing, arrange one or more views on a canvas, and apply the result to its native thumbnail. Useful for showing visually different variants together in one preview.
@@ -10,7 +12,7 @@ Capture the component you are editing, arrange one or more views on a canvas, an
 
 ## Download and install
 
-1. Download **[component-thumbnail-studio-1.1.0.zip](https://github.com/davehillm/bricksbuilder-component-thumbnails/releases/download/v1.1.0/component-thumbnail-studio-1.1.0.zip)** from [Releases](https://github.com/davehillm/bricksbuilder-component-thumbnails/releases).
+1. Download **[component-thumbnail-studio-1.1.1.zip](https://github.com/davehillm/bricksbuilder-component-thumbnails/releases/download/v1.1.1/component-thumbnail-studio-1.1.1.zip)** from [Releases](https://github.com/davehillm/bricksbuilder-component-thumbnails/releases).
 2. In WordPress, open **Plugins → Add New Plugin → Upload Plugin**, upload the ZIP, and activate it.
 3. Enable component screenshots in **Bricks → Settings → Templates & components**.
 4. Reload the Bricks editor, select a component instance, and click the camera in the main toolbar.
@@ -73,9 +75,11 @@ npm run build
 npm run package
 ```
 
-The installable ZIP is written to `build/component-thumbnail-studio-1.1.0.zip`. Only the allow-listed runtime files in `plugin/` are packaged. Optional snippets, source files, tests, and development dependencies are excluded.
+The installable ZIP is written to `build/component-thumbnail-studio-1.1.1.zip`. Only the allow-listed runtime files in `plugin/` are packaged. Optional snippets, source files, tests, and development dependencies are excluded.
 
 The existing suite has 14 TypeScript tests and 82 PHP scenarios, including permissions, stale revisions, thumbnail-only writes, source access, output reuse, reference-aware cleanup, and uninstall retention. PHP scenarios use WordPress test doubles. Live editor testing remains necessary for changes to the Bricks adapter.
+
+The [final security review](SECURITY-REVIEW.md) records the scan scope and limitations. The final v1.1.1 release has locked assets and a locked tag, with GitHub release attestation and SHA-256 checksums. Earlier releases are retained for reference. This is a frozen release, not a promise of continuing security monitoring.
 
 ## License
 

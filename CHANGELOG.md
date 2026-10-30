@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.1
+
+- Final one-off community release; no ongoing support, fixes, or compatibility updates are promised.
+- Publish the security review and tested environment.
+- Lock final release assets and tag with GitHub release attestation and checksums.
+- Archive the repository after verification. Plugin behavior is unchanged from 1.1.0.
+
 ## 1.1.0
 
 - Per-image border, corner-radius, and shadow presets, with fine-tuning controls.

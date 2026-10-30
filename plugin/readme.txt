@@ -2,11 +2,17 @@
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 Compose custom component previews inside the Bricks editor.
+
+== Maintenance status ==
+
+One-off community release. Not actively maintained. No ongoing support, security fixes, or compatibility updates are promised.
+Tested with Bricks 2.4.4, WordPress 7.1.4, and PHP 8.3. Test on a staging site before use.
+The source is shared as a frozen reference. Forks are welcome under the GPL-2.0-or-later license.
 
 == Requirements ==
 
@@ -63,6 +69,11 @@ Only the chosen component's native thumbnail fields are updated; pages, componen
 The Bricks 2.4 adapter is isolated so compatibility can be reviewed before supporting a new major editor version.
 
 == Changelog ==
+
+= 1.1.1 =
+* Final community release with explicit maintenance status and tested environment.
+* Locked GitHub release assets, checksums, and release attestation.
+* Plugin behavior is unchanged from 1.1.0.
 
 = 1.1.0 =
 * Per-image style presets and adjustable borders, corners, and shadows.
