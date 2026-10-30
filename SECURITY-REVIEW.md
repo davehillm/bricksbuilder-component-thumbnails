@@ -1,6 +1,6 @@
 # Final release review
 
-Review date: 30 October 2026. Release: 1.1.1.
+Review date: 30 October 2026. Release: 1.1.2.
 
 This is a point-in-time review of a one-off community release. The project is not actively maintained. No ongoing security fixes or compatibility updates are promised.
 
@@ -13,10 +13,11 @@ This is a point-in-time review of a one-off community release. The project is no
 
 ## Automated checks
 
-- Semgrep Community Edition 1.157.0: PHP, JavaScript, and TypeScript rule sets; 97 rules ran against 23 source targets, with no parser errors.
+- Semgrep Community Edition 1.157.0: PHP, JavaScript, and TypeScript rule sets; 97 rules ran against 18 source targets, with no parser errors.
 - Gitleaks 8.30.1: no detected credentials in the scanned history and release files.
 - npm audit: no known dependency vulnerabilities reported by the advisory service at review time.
-- Type checking, formatting, 14 TypeScript tests, and 82 isolated PHP scenarios passed.
+- Type checking, formatting, 21 TypeScript tests, and 82 isolated PHP scenarios passed.
+- Live capture checks include closed and open nested FAQ instances, multiple captures in one composition, and a tightly fitted Image Feature. Browser test storage was isolated so existing site compositions were not overwritten.
 - The 11 installable runtime files match the tagged source. Optional snippets, screenshots, development dependencies, test fixtures, and local audit files are excluded from the WordPress ZIP.
 
 ## Scanner finding reviewed
@@ -29,7 +30,7 @@ No confirmed exploitable issue was identified in the reviewed paths. A clean sca
 
 ## Publishing safeguards
 
-The final release has immutable assets and a locked tag, GitHub release attestation, and SHA-256 checksums. Secret scanning and push protection are enabled. The Actions workflow uses pinned action commits, read-only permissions, and no persisted checkout credentials. The repository is archived after final verification and remains available to download and fork.
+The final release has immutable assets and a locked tag, GitHub release attestation, and SHA-256 checksums. Secret scanning and push protection are enabled. The Actions workflow uses pinned action commits, read-only permissions, and no persisted checkout credentials. The repository remains available to download and fork.
 
 Automatic update proposals are not enabled for this frozen release: nobody is committed to reviewing, rebuilding, testing, and publishing them. Archiving and automated scan results do not provide ongoing security maintenance.
 

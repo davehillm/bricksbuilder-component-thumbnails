@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Component Thumbnail Studio
  * Description: Compose custom component thumbnails inside the Bricks editor.
- * Version: 1.1.1
+ * Version: 1.1.2
  * Requires at least: 6.5
  * Requires PHP: 8.2
  * Author: Component Thumbnail Studio
@@ -16,7 +16,7 @@ namespace ComponentThumbnailStudio;
 
 defined( 'ABSPATH' ) || exit;
 
-const VERSION = '1.1.1';
+const VERSION = '1.1.2';
 const FILE = __FILE__;
 
 require_once __DIR__ . '/includes/class-storage.php';

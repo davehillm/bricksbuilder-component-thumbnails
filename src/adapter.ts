@@ -103,20 +103,33 @@ export class Adapter {
           ]
         : [state.activeId, selected?.id, componentId]
     ).filter(Boolean) as string[];
+    const instanceIds = new Set(
+      (state.activeComponent
+        ? [state.componentInstanceId, state.componentPreviewInstance?.id]
+        : [selected?.cid === componentId ? selected.id : state.activeElement?.id]
+      ).filter(Boolean),
+    );
+    const componentRoot = (candidate: HTMLElement | null): HTMLElement | null => {
+      let root = candidate?.closest<HTMLElement>('[data-component]') || null;
+      while (root) {
+        // Nestable roots can use the instance ID as their script ID.
+        if (
+          root.dataset.scriptId === componentId ||
+          instanceIds.has(root.dataset.component) ||
+          instanceIds.has(root.dataset.id)
+        )
+          return root;
+        root = root.parentElement?.closest<HTMLElement>('[data-component]') || null;
+      }
+      return null;
+    };
     let node: HTMLElement | null = null;
     const nativeNode = selected ? g?.$_getElementNode?.(selected, 'iframe') : null;
-    if (nativeNode) {
-      let candidate = nativeNode.closest<HTMLElement>('[data-component]');
-      while (candidate && candidate.dataset.scriptId !== componentId)
-        candidate = candidate.parentElement?.closest<HTMLElement>('[data-component]') || null;
-      node = candidate;
-    }
+    if (nativeNode) node = componentRoot(nativeNode);
     for (const id of ids) {
       if (node) break;
       const candidate = doc.querySelector<HTMLElement>(`[data-id="${CSS.escape(id)}"]`);
-      let root = candidate?.closest<HTMLElement>('[data-component]');
-      while (root && root.dataset.scriptId !== componentId)
-        root = root.parentElement?.closest<HTMLElement>('[data-component]') || null;
+      const root = componentRoot(candidate);
       if (root && root.getBoundingClientRect().width > 0) {
         node = root;
         break;

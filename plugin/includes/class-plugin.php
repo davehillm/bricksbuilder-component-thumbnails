@@ -92,6 +92,7 @@ final class Plugin {
 			'Image %d' => __( 'Image %d', 'component-thumbnail-studio' ),
 			'Loading…' => __( 'Loading…', 'component-thumbnail-studio' ),
 			'More actions' => __( 'More actions', 'component-thumbnail-studio' ),
+			'The selected component is not visible in the Bricks canvas. Make it visible and try again.' => __( 'The selected component is not visible in the Bricks canvas. Make it visible and try again.', 'component-thumbnail-studio' ),
 			'No component selected.' => __( 'No component selected.', 'component-thumbnail-studio' ),
 			'No components found.' => __( 'No components found.', 'component-thumbnail-studio' ),
 			'Redo' => __( 'Redo', 'component-thumbnail-studio' ),

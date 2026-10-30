@@ -2,7 +2,7 @@
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -69,6 +69,11 @@ Only the chosen component's native thumbnail fields are updated; pages, componen
 The Bricks 2.4 adapter is isolated so compatibility can be reviewed before supporting a new major editor version.
 
 == Changelog ==
+
+= 1.1.2 =
+* Fix captures of nestable components in slots, including FAQ items.
+* Keep tightly fitted text on its original line by preserving fractional dimensions.
+* Explain when a selected component is not visible on the canvas.
 
 = 1.1.1 =
 * Final community release with explicit maintenance status and tested environment.

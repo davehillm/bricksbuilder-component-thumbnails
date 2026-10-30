@@ -13,6 +13,31 @@ export function canvasBlob(canvas: HTMLCanvasElement): Promise<Blob> {
   );
 }
 
+export function captureDimensions(
+  node: HTMLElement,
+  win: Window,
+): { width: number; height: number } {
+  const style = win.getComputedStyle(node);
+  const pixels = (property: string) => parseFloat(style.getPropertyValue(property)) || 0;
+  const borderBox = style.boxSizing === 'border-box';
+  // offsetWidth/Height round down fractional boxes and can reflow tightly fitted text.
+  const dimension = (axis: string, edges: string[], fallback: number) => {
+    const size = parseFloat(style.getPropertyValue(axis));
+    if (!Number.isFinite(size)) return Math.max(1, fallback);
+    const extra = borderBox
+      ? 0
+      : edges.reduce(
+          (sum, edge) => sum + pixels(`padding-${edge}`) + pixels(`border-${edge}-width`),
+          0,
+        );
+    return Math.max(1, Math.ceil(size + extra));
+  };
+  return {
+    width: dimension('width', ['left', 'right'], node.offsetWidth),
+    height: dimension('height', ['top', 'bottom'], node.offsetHeight),
+  };
+}
+
 export async function captureComponent(target: Target, signal?: AbortSignal): Promise<Blob> {
   const controller = new AbortController(),
     abort = () =>
@@ -62,8 +87,7 @@ async function renderComponent(target: Target, signal: AbortSignal): Promise<Blo
     }
     ancestor = ancestor.parentElement;
   }
-  const width = Math.max(1, node.offsetWidth),
-    height = Math.max(1, node.offsetHeight);
+  const { width, height } = captureDimensions(node, win);
   const scale = Math.min(2, 2048 / width, 8192 / height, Math.sqrt(15000000 / (width * height)));
   signal.throwIfAborted();
   const context = await createContext(node, {

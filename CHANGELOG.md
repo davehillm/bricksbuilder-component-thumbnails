@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.2
+
+- Fix captures of nestable components inside slots, including accordion and FAQ instances.
+- Preserve fractional component dimensions so tightly fitted text keeps its layout.
+- Show an actionable message when a selected component cannot be found on the canvas.
+- Add regression coverage for nested selection and capture sizing.
+
 ## 1.1.1
 
 - Final one-off community release; no ongoing support, fixes, or compatibility updates are promised.

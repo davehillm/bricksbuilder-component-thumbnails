@@ -928,7 +928,11 @@ export class Editor {
     if (this.busy) return;
     const target = this.adapter.selected();
     if (!target) {
-      this.notice(this.t('No component selected.'));
+      const message = this.adapter.selectedId()
+        ? 'The selected component is not visible in the Bricks canvas. Make it visible and try again.'
+        : 'No component selected.';
+      if (this.dialog.open) this.errorMessage(new Error(message));
+      else this.notice(this.t(message));
       return;
     }
     if (!this.componentId) {

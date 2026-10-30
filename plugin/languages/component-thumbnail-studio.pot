@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Component Thumbnail Studio 1.1.1\n"
+"Project-Id-Version: Component Thumbnail Studio 1.1.2\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "A thumbnail can contain up to 12 images."
 msgstr ""
 
-#: includes/class-plugin.php:214
+#: includes/class-plugin.php:215
 msgid "Add an image before applying the thumbnail."
 msgstr ""
 
@@ -184,15 +184,15 @@ msgstr ""
 msgid "More actions"
 msgstr ""
 
-#: includes/class-plugin.php:95
+#: includes/class-plugin.php:96
 msgid "No component selected."
 msgstr ""
 
-#: includes/class-plugin.php:96
+#: includes/class-plugin.php:97
 msgid "No components found."
 msgstr ""
 
-#: includes/class-plugin.php:293
+#: includes/class-plugin.php:294
 msgid "No permission."
 msgstr ""
 
@@ -212,19 +212,19 @@ msgstr ""
 msgid "Preset"
 msgstr ""
 
-#: includes/class-plugin.php:97
+#: includes/class-plugin.php:98
 msgid "Redo"
 msgstr ""
 
-#: includes/class-plugin.php:98
+#: includes/class-plugin.php:99
 msgid "Reload latest"
 msgstr ""
 
-#: includes/class-plugin.php:99
+#: includes/class-plugin.php:100
 msgid "Remove image"
 msgstr ""
 
-#: includes/class-plugin.php:100
+#: includes/class-plugin.php:101
 msgid "Resize image"
 msgstr ""
 
@@ -232,20 +232,20 @@ msgstr ""
 msgid "Rounded outline"
 msgstr ""
 
-#: includes/class-plugin.php:101
+#: includes/class-plugin.php:102
 msgid "Saved"
 msgstr ""
 
-#: includes/class-plugin.php:102
+#: includes/class-plugin.php:103
 msgid "Saving…"
 msgstr ""
 
-#: includes/class-plugin.php:103
+#: includes/class-plugin.php:104
 #, php-format
 msgid "Select image %d"
 msgstr ""
 
-#: includes/class-plugin.php:104
+#: includes/class-plugin.php:105
 msgid "Send backward"
 msgstr ""
 
@@ -277,7 +277,7 @@ msgstr ""
 msgid "Spread"
 msgstr ""
 
-#: includes/class-plugin.php:105
+#: includes/class-plugin.php:106
 msgid "The Bricks canvas is unavailable."
 msgstr ""
 
@@ -285,7 +285,7 @@ msgstr ""
 msgid "The captured image is invalid or too large."
 msgstr ""
 
-#: includes/class-plugin.php:128
+#: includes/class-plugin.php:129
 msgid "The component is unavailable."
 msgstr ""
 
@@ -309,7 +309,7 @@ msgstr ""
 msgid "The image border, corners, or shadow settings are invalid."
 msgstr ""
 
-#: includes/class-plugin.php:106
+#: includes/class-plugin.php:107
 msgid "The image could not be created."
 msgstr ""
 
@@ -317,7 +317,7 @@ msgstr ""
 msgid "The image size or position is invalid."
 msgstr ""
 
-#: includes/class-plugin.php:136
+#: includes/class-plugin.php:137
 msgid "The image upload failed. Try again with an image smaller than 5 MB."
 msgstr ""
 
@@ -329,7 +329,11 @@ msgstr ""
 msgid "The saved image could not be verified."
 msgstr ""
 
-#: includes/class-plugin.php:107
+#: includes/class-plugin.php:95
+msgid "The selected component is not visible in the Bricks canvas. Make it visible and try again."
+msgstr ""
+
+#: includes/class-plugin.php:108
 msgid "The server could not be reached. Your arrangement is still open. Try again."
 msgstr ""
 
@@ -357,27 +361,27 @@ msgstr ""
 msgid "The source image is missing. Capture it again."
 msgstr ""
 
-#: includes/class-plugin.php:162 includes/class-plugin.php:179 includes/class-storage.php:224 includes/class-storage.php:233 includes/class-storage.php:247
+#: includes/class-plugin.php:163 includes/class-plugin.php:180 includes/class-storage.php:224 includes/class-storage.php:233 includes/class-storage.php:247
 msgid "The source image is unavailable."
 msgstr ""
 
-#: includes/class-plugin.php:150 includes/class-plugin.php:154
+#: includes/class-plugin.php:151 includes/class-plugin.php:155
 msgid "The source image list is invalid."
 msgstr ""
 
-#: includes/class-plugin.php:227
+#: includes/class-plugin.php:228
 msgid "The thumbnail action failed. Your previous preview is unchanged. Try again."
 msgstr ""
 
-#: includes/class-plugin.php:224
+#: includes/class-plugin.php:225
 msgid "The thumbnail action is unavailable."
 msgstr ""
 
-#: includes/class-plugin.php:202 includes/class-plugin.php:206
+#: includes/class-plugin.php:203 includes/class-plugin.php:207
 msgid "The thumbnail arrangement is invalid."
 msgstr ""
 
-#: includes/class-plugin.php:108
+#: includes/class-plugin.php:109
 msgid "The thumbnail canvas is unavailable."
 msgstr ""
 
@@ -389,15 +393,15 @@ msgstr ""
 msgid "The thumbnail could not be assigned. The previous preview is unchanged."
 msgstr ""
 
-#: includes/class-plugin.php:109
+#: includes/class-plugin.php:110
 msgid "The thumbnail could not be saved. Try again."
 msgstr ""
 
-#: includes/class-plugin.php:195
+#: includes/class-plugin.php:196
 msgid "The thumbnail revision is invalid."
 msgstr ""
 
-#: includes/class-plugin.php:140
+#: includes/class-plugin.php:141
 msgid "The uploaded image could not be read."
 msgstr ""
 
@@ -405,11 +409,11 @@ msgstr ""
 msgid "The uploads folder is unavailable."
 msgstr ""
 
-#: includes/class-plugin.php:110
+#: includes/class-plugin.php:111
 msgid "This component is too large to capture. Try a narrower breakpoint."
 msgstr ""
 
-#: includes/class-plugin.php:217 includes/class-storage.php:90 includes/class-storage.php:103
+#: includes/class-plugin.php:218 includes/class-storage.php:90 includes/class-storage.php:103
 msgid "This thumbnail changed in another window. Reopen it to continue."
 msgstr ""
 
@@ -417,19 +421,19 @@ msgstr ""
 msgid "This thumbnail changed in another window. Reopen it to load the latest version."
 msgstr ""
 
-#: includes/class-plugin.php:111
+#: includes/class-plugin.php:112
 msgid "This video needs a poster image before it can be captured."
 msgstr ""
 
-#: includes/class-plugin.php:112
+#: includes/class-plugin.php:113
 msgid "Thumbnail"
 msgstr ""
 
-#: includes/class-plugin.php:113
+#: includes/class-plugin.php:114
 msgid "Thumbnail canvas"
 msgstr ""
 
-#: includes/class-plugin.php:114
+#: includes/class-plugin.php:115
 msgid "Thumbnail images"
 msgstr ""
 
@@ -437,7 +441,7 @@ msgstr ""
 msgid "Too many retained source images."
 msgstr ""
 
-#: includes/class-plugin.php:115
+#: includes/class-plugin.php:116
 msgid "Undo"
 msgstr ""
 
@@ -445,7 +449,7 @@ msgstr ""
 msgid "Use a PNG image smaller than 5 MB."
 msgstr ""
 
-#: includes/class-plugin.php:116
+#: includes/class-plugin.php:117
 msgid "Use automatic thumbnail"
 msgstr ""
 
@@ -457,7 +461,7 @@ msgstr ""
 msgid "You cannot access a source image from its original page."
 msgstr ""
 
-#: includes/class-plugin.php:125
+#: includes/class-plugin.php:126
 msgid "You do not have permission to edit component thumbnails."
 msgstr ""
 
