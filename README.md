@@ -4,6 +4,10 @@
 
 Capture the component you are editing, arrange one or more views on a canvas, and apply the result to its native thumbnail. Useful for showing visually different variants together in one preview.
 
+![Arrange and resize a captured component in Thumbnail Studio, with an editable background and image styling controls.](docs/images/thumbnail-editor.png)
+
+
+
 ## Download and install
 
 1. Download **[component-thumbnail-studio-1.1.0.zip](https://github.com/davehillm/bricksbuilder-component-thumbnails/releases/download/v1.1.0/component-thumbnail-studio-1.1.0.zip)** from [Releases](https://github.com/davehillm/bricksbuilder-component-thumbnails/releases).
