@@ -3,7 +3,14 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from security_scan import extract_snippet, filter_sarif, finding_key, reviewed_keys
+from security_scan import (
+    SNIPPET,
+    extract_snippet,
+    filter_sarif,
+    finding_key,
+    map_generated_locations,
+    reviewed_keys,
+)
 
 
 class FindingReviewTests(unittest.TestCase):
@@ -87,6 +94,18 @@ class FindingReviewTests(unittest.TestCase):
         self.source.write_text("<?php // marker removed\n")
         with self.assertRaises(RuntimeError):
             extract_snippet(self.source, destination)
+
+    def test_embedded_javascript_locations_map_back_to_the_php_snippet(self):
+        generated = (self.root / "snippet.js").resolve()
+        for uri in (str(generated), generated.as_uri()):
+            location = {
+                "artifactLocation": {"uri": uri},
+                "region": {"startLine": 2, "endLine": 3},
+            }
+            report = {"nested": [{"physicalLocation": location}]}
+            map_generated_locations(report, generated, 17)
+            self.assertEqual(location["artifactLocation"]["uri"], SNIPPET)
+            self.assertEqual(location["region"], {"startLine": 19, "endLine": 20})
 
 
 if __name__ == "__main__":

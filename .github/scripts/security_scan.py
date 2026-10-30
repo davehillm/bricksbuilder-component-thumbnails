@@ -199,7 +199,7 @@ def main():
         smoke = temporary / "probes"
         smoke.mkdir()
         smoke_test(args.scanner, config, smoke)
-        generated = temporary / "sidebar-component-previews.js"
+        generated = (temporary / "sidebar-component-previews.js").resolve()
         offset = extract_snippet(Path(SNIPPET), generated)
         report, sarif = scan(
             args.scanner, config, [*SOURCE_DIRECTORIES, generated], args.output
