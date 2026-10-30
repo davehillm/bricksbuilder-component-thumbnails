@@ -79,6 +79,8 @@ The installable ZIP is written to `build/component-thumbnail-studio-1.1.2.zip`. 
 
 The existing suite has 21 TypeScript tests and 82 PHP scenarios, including permissions, stale revisions, thumbnail-only writes, source access, output reuse, reference-aware cleanup, and uninstall retention. PHP scenarios use WordPress test doubles. Live editor testing remains necessary for changes to the Bricks adapter.
 
+Pull requests and updates to `main` also run the **Security scan** check. It scans first-party PHP, JavaScript, TypeScript, and the JavaScript embedded in the optional sidebar snippet. The scanner, rules, and GitHub actions are pinned. Results are published to GitHub’s Security tab for trusted branches; fork pull requests run the same blocking scan without write access. No Semgrep account or source-code upload is required, and scanner telemetry is disabled. Reviewed findings are accepted only for the recorded source-file hashes, finding locations, scanner version, and rule-set hash. Changing any of these requires review again.
+
 The [final security review](SECURITY-REVIEW.md) records the scan scope and limitations. The final v1.1.2 release has locked assets and a locked tag, with GitHub release attestation and SHA-256 checksums. Earlier releases are retained for reference. This is a frozen release, not a promise of continuing security monitoring.
 
 ## License
