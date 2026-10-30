@@ -6,7 +6,7 @@ Capture the component you are editing, arrange one or more views on a canvas, an
 
 ![Arrange and resize a captured component in Thumbnail Studio, with an editable background and image styling controls.](docs/images/thumbnail-editor.png)
 
-
+![Finished custom thumbnails displayed in the Bricks component library, including previews showing multiple variants.](docs/images/component-library.jpg)
 
 ## Download and install
 
