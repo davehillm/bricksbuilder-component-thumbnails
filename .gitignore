@@ -1,5 +1,8 @@
 node_modules/
 build/
+.security-rules/
+__pycache__/
+.ruff_cache/
 .DS_Store
 *.log
 .env

@@ -28,6 +28,18 @@ This was reviewed as a false positive for this response path. The handler requir
 
 No confirmed exploitable issue was identified in the reviewed paths. A clean scan does not establish the absence of vulnerabilities.
 
+## Automatic checks after release
+
+The repository now runs a required **Security scan** check on pull requests and updates to `main`, with a manual run option. Semgrep 1.183.0 is pinned by container digest. The community PHP, browser JavaScript, general JavaScript, and TypeScript security rules are pinned to an immutable revision and checked by content hash. Source code stays in the GitHub runner; no Semgrep account is used and telemetry is disabled.
+
+The scan covers first-party runtime source, build scripts, the optional PHP snippet, and its extracted JavaScript. The generated editor bundle is excluded because its first-party source is scanned directly; bundled dependency advisories are covered separately by Dependabot alerts.
+
+Eleven findings in the unchanged source were reviewed: the authenticated PNG response described above, fixed interface markup with bundled CSS, and internal SVG icon templates. The exact rule, file, location, full source hash, scanner version, and rule-set hash are recorded in `.github/security/reviewed-findings.json`. These are narrow, content-bound review records, not global rule exclusions. Changes invalidate the corresponding records. New findings, scanner failures, and parser errors fail the check. Accepted findings are counted in the job summary; remaining findings are uploaded to GitHub code scanning on trusted branches.
+
+Every scan first verifies that the rules detect deliberately unsafe PHP, JavaScript, and TypeScript probes. Separate tests verify that source changes, moved findings, and scanner or rule changes invalidate review records. These probes are created temporarily by the check and are not shipped with the plugin.
+
+This repository automation does not alter the immutable v1.1.2 download or add an ongoing maintenance commitment.
+
 ## Publishing safeguards
 
 The final release has immutable assets and a locked tag, GitHub release attestation, and SHA-256 checksums. Secret scanning and push protection are enabled. The Actions workflow uses pinned action commits, read-only permissions, and no persisted checkout credentials. The repository remains available to download and fork.

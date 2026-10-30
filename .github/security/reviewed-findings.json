@@ -1,0 +1,95 @@
+{
+  "semgrepVersion": "1.183.0",
+  "rulesRevision": "16b9e6d45f10649f6a531ec4838ed9924372c3bc",
+  "findings": [
+    {
+      "ruleId": "php.lang.security.injection.echoed-request.echoed-request",
+      "path": "plugin/includes/class-plugin.php",
+      "startLine": 169,
+      "endLine": 169,
+      "sourceSha256": "c22a79ce40db796de5831a4baa40a7166654d80e953a73d63d960358bce89308",
+      "reason": "Authenticated PNG response: authorized capture ownership, original-page permission, validated PNG bytes and AEAD decryption, image/png Content-Type and nosniff. HTML escaping would corrupt the image."
+    },
+    {
+      "ruleId": "javascript.browser.security.insecure-document-method.insecure-document-method",
+      "path": "src/editor.ts",
+      "startLine": 85,
+      "endLine": 85,
+      "sourceSha256": "707e1c9ae2934eef80425de07aa1b58f7348fca469c729167feee03efd1a267b",
+      "reason": "Markup and CSS are bundled source constants. Icon markup comes only from the internal SVG path dictionary; user-facing values are assigned with textContent or DOM attributes."
+    },
+    {
+      "ruleId": "javascript.browser.security.insecure-innerhtml.insecure-innerhtml",
+      "path": "src/editor.ts",
+      "startLine": 85,
+      "endLine": 85,
+      "sourceSha256": "707e1c9ae2934eef80425de07aa1b58f7348fca469c729167feee03efd1a267b",
+      "reason": "Markup and CSS are bundled source constants. Icon markup comes only from the internal SVG path dictionary; user-facing values are assigned with textContent or DOM attributes."
+    },
+    {
+      "ruleId": "javascript.lang.security.html-in-template-string.html-in-template-string",
+      "path": "src/editor.ts",
+      "startLine": 85,
+      "endLine": 85,
+      "sourceSha256": "707e1c9ae2934eef80425de07aa1b58f7348fca469c729167feee03efd1a267b",
+      "reason": "Markup and CSS are bundled source constants. Icon markup comes only from the internal SVG path dictionary; user-facing values are assigned with textContent or DOM attributes."
+    },
+    {
+      "ruleId": "javascript.browser.security.insecure-document-method.insecure-document-method",
+      "path": "src/editor.ts",
+      "startLine": 269,
+      "endLine": 269,
+      "sourceSha256": "707e1c9ae2934eef80425de07aa1b58f7348fca469c729167feee03efd1a267b",
+      "reason": "Markup and CSS are bundled source constants. Icon markup comes only from the internal SVG path dictionary; user-facing values are assigned with textContent or DOM attributes."
+    },
+    {
+      "ruleId": "javascript.browser.security.insecure-innerhtml.insecure-innerhtml",
+      "path": "src/editor.ts",
+      "startLine": 269,
+      "endLine": 269,
+      "sourceSha256": "707e1c9ae2934eef80425de07aa1b58f7348fca469c729167feee03efd1a267b",
+      "reason": "Markup and CSS are bundled source constants. Icon markup comes only from the internal SVG path dictionary; user-facing values are assigned with textContent or DOM attributes."
+    },
+    {
+      "ruleId": "javascript.lang.security.html-in-template-string.html-in-template-string",
+      "path": "src/icons.ts",
+      "startLine": 18,
+      "endLine": 18,
+      "sourceSha256": "f37517d7283436edc9d8c21d00ac7fc3a4658cc97ac32cf6a6f2c8950aeb52c5",
+      "reason": "SVG paths come only from the internal source-controlled dictionary. No user data is interpolated into the SVG markup."
+    },
+    {
+      "ruleId": "javascript.browser.security.insecure-document-method.insecure-document-method",
+      "path": "src/index.ts",
+      "startLine": 34,
+      "endLine": 34,
+      "sourceSha256": "e0c8aee75cf838f1eb4b3dcd19f9a60a9f0d57a31934322a5b298c7b5ecd1912",
+      "reason": "The camera SVG is a fixed icon from the internal source-controlled dictionary."
+    },
+    {
+      "ruleId": "javascript.browser.security.insecure-innerhtml.insecure-innerhtml",
+      "path": "src/index.ts",
+      "startLine": 34,
+      "endLine": 34,
+      "sourceSha256": "e0c8aee75cf838f1eb4b3dcd19f9a60a9f0d57a31934322a5b298c7b5ecd1912",
+      "reason": "The camera SVG is a fixed icon from the internal source-controlled dictionary."
+    },
+    {
+      "ruleId": "javascript.browser.security.insecure-document-method.insecure-document-method",
+      "path": "src/style-controls.ts",
+      "startLine": 38,
+      "endLine": 38,
+      "sourceSha256": "bdce189b3be4733d5baab7e5e78ed934720cb20e5930fce1f9c74f26e4c18209",
+      "reason": "The style SVG is a fixed icon from the internal source-controlled dictionary."
+    },
+    {
+      "ruleId": "javascript.browser.security.insecure-innerhtml.insecure-innerhtml",
+      "path": "src/style-controls.ts",
+      "startLine": 38,
+      "endLine": 38,
+      "sourceSha256": "bdce189b3be4733d5baab7e5e78ed934720cb20e5930fce1f9c74f26e4c18209",
+      "reason": "The style SVG is a fixed icon from the internal source-controlled dictionary."
+    }
+  ],
+  "rulesSha256": "d1aabd49bb72d493504ecfb3df86344610bc6d1adabb26bcf210a4b0e3deb0c4"
+}
