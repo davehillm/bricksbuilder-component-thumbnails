@@ -1,0 +1,25 @@
+{
+  "name": "component-thumbnail-studio",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "test:php": "node scripts/php-tests.mjs",
+    "typecheck": "tsc --noEmit --noUnusedLocals --noUnusedParameters",
+    "package": "node scripts/package.mjs",
+    "format:check": "prettier --check src scripts \"tests/*.ts\" package.json tsconfig.json .prettierrc.json"
+  },
+  "dependencies": {
+    "modern-screenshot": "4.7.0"
+  },
+  "devDependencies": {
+    "@php-wasm/cli": "3.1.61",
+    "@types/node": "26.6.6",
+    "esbuild": "0.28.2",
+    "prettier": "3.6.2",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  }
+}
